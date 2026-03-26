@@ -32,7 +32,12 @@
             position: relative;
             border-bottom: 1px solid #ddd;
         }
-
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
         .nav-info {
             position: absolute;
             top: 20px;
@@ -113,35 +118,22 @@
             border-bottom: 1px solid #000;
         }
 
-        .work-item {
-            display: grid;
-            grid-template-columns: 1fr;
-            border-bottom: 1px solid #ddd;
-        }
+     .work-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
 
-        .work-info {
-            padding: 30px 20px;
-        }
+.work-info {
+    padding: 0;
+}
 
-        .work-number {
-            font-size: 14vw;
-            font-weight: 900;
-        }
-
-        .work-details h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .work-details p {
-            color: var(--accent);
-            font-size: 1rem;
-        }
-
-        .work-image-container {
+.work-image-container {
     padding: 20px;
     background: #fff;
-}
+}   
+
 
 .work-image-container img {
     width: 100%;
@@ -280,7 +272,47 @@
                 font-size: 30vw;
             }
         }
+@media (max-width: 768px) {
 
+    section {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* STACK EVERYTHING */
+    .work-item,
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .work-info {
+        order: 2;
+    }
+
+    .work-image-container {
+        order: 1;
+    }
+
+    .work-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .work-details p {
+        font-size: 0.95rem;
+    }
+
+    .services-list {
+        gap: 10px;
+    }
+
+    .services-list div {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+}
     </style>
 </head>
 
@@ -295,10 +327,12 @@
 
 <!-- SKILLS -->
 <section class="skills-section">
+    <div class="container">
     <h2>Tools & Skills</h2>
     <p>
         Adobe Photoshop · Illustrator · Canva · Branding · Poster Design · Typography · Visual Identity
     </p>
+</div>
 </section>
 
 <!-- SERVICES -->
