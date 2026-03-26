@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio 2026 | Designer & Developer</title>
+
     <style>
         :root {
-            --bg-color: #f4f4f4;
+            --bg-color: #ede5e5;
             --text-dark: #1a1a1a;
-            --accent: #666;
+            --accent: #323131;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,332 +18,290 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-dark);
-            line-height: 1.2;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
-        /* --- HERO SECTION (Ashwin Style) --- */
+        /* HERO */
         .hero {
-            height: 75vh;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
             position: relative;
-            padding-bottom: 0;
             border-bottom: 1px solid #ddd;
         }
 
         .nav-info {
             position: absolute;
-            top: 40px;
+            top: 20px;
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 0 5%;
+            padding: 0 20px;
             font-size: 14px;
-            font-weight: 500;
         }
 
+        .bg-text {
+            position: absolute;
+            bottom: 0;
+            font-size: 22vw;
+            font-weight: 900;
+            color: #2a2929;
+            opacity: 1;
+        }
 
+        .subject-img {
+            max-height: 80vh;
+            max-width: 90%;
+            object-fit: contain;
+            z-index: 2;
+        }
+
+        /* SKILLS */
         .skills-section {
-    padding: 100px 5%;
-    text-align: center;
+            padding: 60px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .skills-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .skills-section p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* SERVICES */
+        .services-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .services-list div {
+            padding: 10px 18px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            background: #fff;
+        }
+
+        /* WORK */
+        .section-label {
+            padding: 60px 20px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+        }
+
+        .work-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .work-info {
+            padding: 30px 20px;
+        }
+
+        .work-number {
+            font-size: 14vw;
+            font-weight: 900;
+        }
+
+        .work-details h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .work-details p {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .work-image-container {
+    padding: 20px;
     background: #fff;
 }
 
-.skills-section h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: 800;
+.work-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.skills-section p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-
-
-
-.services-section {
-    padding: 100px 5%;
-    background: #f4f4f4;
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 2.8rem;
-    margin-bottom: 40px;
-    font-weight: 800;
-}
-
-.services-list {
+  /* FULL SECTION */
+.about-section {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
 }
 
-.services-list div {
-    padding: 15px 25px;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    font-size: 1rem;
-    background: #fff;
-}
-
-
-
-
-
-.footer {
-    padding: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    background: #fff;
-}
-       
-       
-       
-       
-        .about-section {
-    padding: 0; /* remove spacing */
-    background: #fff;
-}
-
+/* GRID */
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh; /* full screen height */
+    width: 100%;
 }
 
-/* LEFT TEXT */
+/* TEXT */
 .about-text {
-    padding: 100px 10%;
+    padding: 80px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.about-text h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 1.05rem;
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    max-width: 450px;
-}
-
-/* RIGHT IMAGE FULL */
+/* IMAGE SIDE */
 .about-image {
-    width: 100%;
-    height: 100%;
+    height: 100vh;   /* 🔥 IMPORTANT */
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 🔥 fills entire right side */
+    object-fit: cover;   /* fills full */
+    object-position: right center;
+}
+/* DESKTOP FIX */
+@media (max-width: 768px) {
+
+    .about-section {
+        display: block;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .about-image img {
+        object-fit: contain;
+    }
 }
 
-
-
-
-
-
-.contact-section {
-    padding: 120px 5%;
-    background: #111; /* dark section for contrast */
-    color: #fff;
-    text-align: center;
-}
-
-.contact-container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.contact-container h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.contact-subtext {
-    color: #aaa;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-}
-
-.contact-info p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* links */
-.contact-info a {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #555;
-    padding-bottom: 2px;
-}
-
-.contact-info a:hover {
-    border-color: #fff;
-}
-        .tagline { text-align: right; max-width: 280px; text-transform: lowercase; }
-
-        .bg-text {
-            position: absolute;
-            bottom: -5%;
-            font-size: 30vw;
-            font-weight: 900;
-            letter-spacing: -0.05em;
-            color: #3b3838;
-            white-space: nowrap;
-            z-index: 0;
+        /* CONTACT */
+        .contact-section {
+            padding: 80px 20px;
+            background: #111;
+            color: #fff;
+            text-align: center;
         }
 
-        .subject-img {
-            height: 115vh;
-            z-index: 2;
-            filter: grayscale(100%);
-            /* Placeholder styling if no image provided */
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        .contact-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        /* --- WORKS SECTION (Rhyzza Style) --- */
-        .section-label {
-            padding: 100px 5% 20px;
+        .contact-subtext {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px;
+            text-align: center;
             font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 1px solid #000;
-            margin-bottom: 0;
+            background: #fff;
         }
 
-        .work-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 80vh;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .work-info {
-            padding: 60px 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .work-number {
-            font-size: 10vw;
-            font-weight: 900;
-            margin-bottom: 20px;
-            letter-spacing: -0.05em;
-        }
-
-        .work-details h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            max-width: 400px;
-        }
-
-        .work-details p {
-            color: var(--accent);
-            max-width: 350px;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        .work-image-container {
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .work-image-container img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .work-item:hover .work-image-container img {
-            transform: scale(1.05);
-        }
-
-        /* --- DOCK (Floating Nav) --- */
+        /* DOCK */
         .dock {
             position: fixed;
-            bottom: 30px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(15px);
-            padding: 12px 25px;
-            border-radius: 50px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 15px;
+            border-radius: 30px;
             display: flex;
-            gap: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            z-index: 100;
-            border: 1px solid rgba(0,0,0,0.05);
+            gap: 15px;
+            font-size: 11px;
         }
 
         .dock a {
             text-decoration: none;
             color: #000;
             font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .work-item { grid-template-columns: 1fr; }
-            .work-info { order: 2; padding: 40px 5%; }
-            .work-image-container { height: 400px; }
-            .bg-text { font-size: 30vw; }
+        /* DESKTOP */
+        @media (min-width: 768px) {
+
+            .work-item {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr 1fr;
+                min-height: 100vh;
+            }
+
+            .about-image {
+                height: auto;
+            }
+
+            .subject-img {
+                max-height: 110vh;
+            }
+
+            .bg-text {
+                font-size: 30vw;
+            }
         }
+
     </style>
 </head>
+
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="nav-info">
-            <div></div>
-            
-        </div>
-        
-        <div class="bg-text">DESIGNER</div>
-        
-        <!-- Replace 'your-photo.png' with your transparent cut-out image -->
-        <img src="SHAJOO (1).png" alt="Profile" class="subject-img">
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <div class="nav-info"></div>
+    <div class="bg-text">DESIGNER</div>
+    <img src="SHAJOO (1).png" alt="Profile" class="subject-img">
+</section>
 
-
-    <section class="skills-section">
+<!-- SKILLS -->
+<section class="skills-section">
     <h2>Tools & Skills</h2>
     <p>
         Adobe Photoshop · Illustrator · Canva · Branding · Poster Design · Typography · Visual Identity
     </p>
 </section>
 
-
+<!-- SERVICES -->
 <section class="services-section">
     <h2>Services</h2>
 
@@ -354,53 +313,50 @@
     </div>
 </section>
 
+<!-- WORKS -->
+<div class="section-label">Selected Works / 2024-2026</div>
 
-    <!-- WORKS SECTION -->
-    <div class="section-label">Selected Works / 2024-2026</div>
+<section class="work-item">
+    <div class="work-info">
+        <div class="work-number">01.</div>
+        <div class="work-details">
+            <h2>Professional & Concise</h2>
+            <p> A comprehensive branding and brochure design project for a maritime service provider. This work focuses on communicating high-stakes technical services like hydro blasting, industrial tank cleaning, and marine manpower supply through a structured, high-contrast layout that emphasizes reliability and industry standards.</p>
+        </div>
+    </div>
+    <div class="work-image-container">
+        <img src="work1.PNG" alt="Project 1">
+    </div>
+</section>
 
-    <!-- Project 01 -->
-    <section class="work-item">
-        <div class="work-info">
-            <div class="work-number">01.</div>
-            <div class="work-details">
-                <h1></h1>
-                <h2>Professional & Concise</h2>
-                <p> A comprehensive branding and brochure design project for a maritime service provider. This work focuses on communicating high-stakes technical services like hydro blasting, industrial tank cleaning, and marine manpower supply through a structured, high-contrast layout that emphasizes reliability and industry standards.</p>
-            </div>
+<section class="work-item">
+    <div class="work-info">
+        <div class="work-number">02.</div>
+        <div class="work-details">
+            <h2>Business Card Design</h2>
+            <p>Designed a modern and professional business card for Infra Assure IT Solutions, focusing on clarity, brand identity, and effective information hierarchy. The layout balances typography and spacing to present contact details in a clean and organized manner, while the use of brand colors enhances visual consistency. The inclusion of a QR code on the reverse side adds functionality, enabling quick digital access to company information. The overall design reflects a corporate and trustworthy image suitable for professional networking.</p>
         </div>
-        <div class="work-image-container">
-            <!-- Replace with your project image -->
-            <img src="work1.PNG" alt="Project 1">
-        </div>
-    </section>
+    </div>
+    <div class="work-image-container">
+        <img src="workk2.jpeg" alt="Project 2">
+    </div>
+</section>
 
-    <!-- Project 02 -->
-    <section class="work-item">
-        <div class="work-info">
-            <div class="work-number">02.</div>
-            <div class="work-details">
-                <h2>Business Card Design</h2>
-                <p>Designed a modern and professional business card for Infra Assure IT Solutions, focusing on clarity, brand identity, and effective information hierarchy. The layout balances typography and spacing to present contact details in a clean and organized manner, while the use of brand colors enhances visual consistency. The inclusion of a QR code on the reverse side adds functionality, enabling quick digital access to company information. The overall design reflects a corporate and trustworthy image suitable for professional networking.</p>
-            </div>
+<section class="work-item">
+    <div class="work-info">
+        <div class="work-number">03.</div>
+        <div class="work-details">
+            <h2>Event & Promotional Poster Design</h2>
+            <p>Designed visually engaging promotional posters for a cultural event and a premium jewelry brand campaign. The layouts combine bold typography, vibrant color palettes, and well-balanced compositions to capture attention and communicate key details effectively. Integrated regional language elements and brand-focused visuals to enhance audience connection and authenticity. The designs emphasize clarity, hierarchy, and visual storytelling, ensuring both aesthetic appeal and functional communication.</p>
         </div>
-        <div class="work-image-container">
-            <img src="workk2.jpeg" alt="Project 2">
-        </div>
-    </section>
+    </div>
+    <div class="work-image-container">
+        <img src="image.png" alt="Project 3">
+    </div>
+</section>
 
-    <section class="work-item">
-        <div class="work-info">
-            <div class="work-number">03.</div>
-            <div class="work-details">
-                <h2>Event & Promotional Poster Design</h2>
-                <p>Designed visually engaging promotional posters for a cultural event and a premium jewelry brand campaign. The layouts combine bold typography, vibrant color palettes, and well-balanced compositions to capture attention and communicate key details effectively. Integrated regional language elements and brand-focused visuals to enhance audience connection and authenticity. The designs emphasize clarity, hierarchy, and visual storytelling, ensuring both aesthetic appeal and functional communication.</p>
-            </div>
-        </div>
-        <div class="work-image-container">
-            <img src="image.png" alt="Project 2">
-        </div>
-    </section>
-    <section class="about-section">
+<!-- ABOUT -->
+<section class="about-section">
     <div class="about-container">
 
         <div class="about-text">
@@ -421,6 +377,8 @@
 
     </div>
 </section>
+
+<!-- CONTACT -->
 <section class="contact-section">
     <div class="contact-container">
 
@@ -430,24 +388,26 @@
         </p>
 
         <div class="contact-info">
-            <p>Email — <a href="shajohnmreji007@gmail.com">shajohnmreji007@gmail.com</a></p>
-            <p>Phone — <a href="tel:+91 9544385724">+91 9544385724</a></p>
+            <p>Email — <a href="mailto:shajohnmreji007@gmail.com">shajohnmreji007@gmail.com</a></p>
+            <p>Phone — <a href="tel:+919544385724">+91 9544385724</a></p>
             <p>Location — Kerala, India</p>
         </div>
 
     </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 ShajohnMReji— All rights reserved</p>
 </footer>
-<
-    <!-- FLOATING DOCK -->
-    <nav class="dock">
-        <a href="#">Home</a>
-        <a href="#">Work</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+
+<!-- DOCK -->
+<nav class="dock">
+    <a href="#">Home</a>
+    <a href="#">Work</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
 
 </body>
 </html>
